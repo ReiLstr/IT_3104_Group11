@@ -21,7 +21,6 @@ body {
     line-height: 1.6;
 }
 
-/* Banner Header */
 header {
     color: rgb(5, 5, 5);
     padding: 3rem 2rem;
@@ -40,7 +39,6 @@ header p {
     margin: 0 auto;
 }
 
-/* Main Container */
 main {
     max-width: 800px;
     margin: -1.5rem auto 3rem auto;
@@ -56,7 +54,6 @@ main {
     padding-left: 0.75rem;
 }
 
-/* Simple List Styling */
 .activity-list {
     list-style: none;
     background: var(--card-bg);
@@ -92,7 +89,6 @@ main {
     font-size: 0.9rem;
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     background-color: var(--primary);
@@ -119,7 +115,6 @@ main {
     background-color: #cbd5e1;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
