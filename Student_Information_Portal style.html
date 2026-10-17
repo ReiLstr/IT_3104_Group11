@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Profile Portal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        nav a {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        aside, section {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+        }
+
+        h2 {
+            color: #1e3a8a;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        figure, figcaption {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #1e3a8a;
+            color: white;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"],
+        input[list], select, textarea {
+            width: 100%;
+            max-width: 350px;
+            padding: 6px;
+        }
+
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Student Profile Portal</h1>
+    <p>Welcome to my student profile.</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a> |
+    <a href="#profile">Profile</a> |
+    <a href="#grades">Grades</a> |
+    <a href="#contact">Contact</a>
+</nav>
+
+<hr>
+
+<aside>
+    <h3>Quick Profile</h3>
+    <p><b>Name:</b> Enrico A. Alvaro - Andrei R. Lusterio - Jahrome R. Rodriguez </p>
+    <p><b>Course:</b> BS Information Technology</p>
+    <p><b>Status:</b> Student</p>
+</aside>
+
+<main>
+
+<section id="profile">
+    <h2>About Me</h2>
+
+    <p>
+        Hello! I am
+        <span style="border:1px solid black;">Enrico A. Alvaro</span>.
+        I am <b>responsible</b>, <i>determined</i>,
+        <strong>hardworking</strong>, and <em>consistent</em>.
+
+        Hello! I am
+        <span style="border:1px solid black;">Andrei R. Lusterio</span>.
+        I am <b>gamer</b>, <i>happy</i>,
+        <strong>good student</strong>, and <em>consistent</em>.
+
+        Hello! I am
+        <span style="border:1px solid black;">Jahrome R. Rodriguez</span>.
+        I am <b>gamer</b>, <i>determined</i>,
+        <strong>generous</strong>, and <em>consistent</em>.
+    </p>
+
+    <hr>
+
+    <article>
+        <h3>Goal</h3>
+        <p>Our goal is to improve my IT and programming skills.</p>
+    </article>
+</section>
+
+<section>
+    <h2>Media</h2>
+
+    <figure>
+        <img src="WIN_20260912_14_43_04_Pro.jpg"
+             alt="Student image"
+             width="300">
+        <figcaption>Figure 1. Student studying.</figcaption>
+    </figure>
+</section>
+
+<section id="grades">
+    <h2>Academic Record</h2>
+
+    <table border="1">
+        <tr>
+            <th>Student</th>
+            <th>Subject</th>
+            <th>Grade</th>
+        </tr>
+
+        <tr>
+            <td rowspan="3">Enrico A. Alvaro, Andrei R. Lusterio, Jahrome R. Rodriguez</td>
+            <td>Web Development</td>
+            <td>1.75</td>
+        </tr>
+
+        <tr>
+            <td>Programming</td>
+            <td>2.00</td>
+        </tr>
+
+        <tr>
+            <td>Database</td>
+            <td>1.75</td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><b>Overall GPA</b></td>
+            <td><b>1.83</b></td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>Registration / Feedback</h2>
+
+    <form action="#" method="POST">
+
+        <label>Full Name:</label>
+        <input type="text" name="name" required>
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <br><br>
+
+        <label>Telephone:</label>
+        <input type="tel" name="phone"
+               pattern="[0-9]{11}"
+               placeholder="09XXXXXXXXX">
+        <br><br>
+
+        <label>Course:</label>
+
+        <select name="course">
+            <optgroup label="Computer Science">
+                <option>Computer Science</option>
+            </optgroup>
+
+            <optgroup label="Information Technology">
+                <option>Information Technology</option>
+            </optgroup>
+        </select>
+
+        <br><br>
+
+        <label>Programming Language:</label>
+        <input list="languages" name="language">
+
+        <datalist id="languages">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JavaScript">
+            <option value="Python">
+        </datalist>
+
+        <br><br>
+
+        <label>Electives:</label><br>
+
+        <input type="checkbox" name="elective" value="web">
+        Web Design
+
+        <input type="checkbox" name="elective" value="data">
+        Data Analytics
+
+        <br><br>
+
+        <label>Upload File:</label>
+        <input type="file" name="file">
+
+        <br><br>
+
+        <label>Feedback:</label><br>
+
+        <textarea name="feedback" rows="4"></textarea>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+</section>
+
+</main>
+
+<hr>
+
+</body>
+</html>
