@@ -1,0 +1,332 @@
+/* ==========================================================
+   Student Profile Portal - style.css
+   ========================================================== */
+
+:root {
+    --primary: #1e3a8a;
+    --primary-dark: #14275c;
+    --accent: #f59e0b;
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #d1d5db;
+    --radius: 10px;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-areas:
+        "header header"
+        "nav    nav"
+        "aside  main";
+    gap: 24px;
+    min-height: 100vh;
+}
+
+/* The plain <hr> separators are not needed with the card layout */
+body > hr {
+    display: none;
+}
+
+/* ---------- Header ---------- */
+header {
+    grid-area: header;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    grid-area: nav;
+    background: var(--primary-dark);
+    text-align: center;
+    padding: 12px;
+    color: #94a3b8;           /* colour of the "|" separators */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: var(--shadow);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+    background: var(--accent);
+    color: #111;
+}
+
+/* ---------- Sidebar ---------- */
+aside {
+    grid-area: aside;
+    align-self: start;
+    background: var(--card);
+    margin: 0 0 24px 24px;
+    padding: 20px;
+    border-radius: var(--radius);
+    border-top: 4px solid var(--accent);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 70px;
+}
+
+aside h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+aside p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+/* ---------- Main content ---------- */
+main {
+    grid-area: main;
+    margin: 0 24px 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+main section {
+    background: var(--card);
+    padding: 24px 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+main h2 {
+    margin-top: 0;
+    padding-bottom: 8px;
+    color: var(--primary);
+    border-bottom: 3px solid var(--accent);
+    display: inline-block;
+}
+
+main h3 {
+    color: var(--primary-dark);
+}
+
+main hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+}
+
+/* Name highlights inside "About Me" */
+main span[style] {
+    background: #fef3c7;
+    border-color: var(--accent) !important;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-weight: 600;
+}
+
+article {
+    background: #f8fafc;
+    border-left: 4px solid var(--primary);
+    padding: 4px 18px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* ---------- Media ---------- */
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--muted);
+}
+
+/* ---------- Table ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+th,
+td {
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    background: var(--primary);
+    color: #fff;
+}
+
+tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+tr:hover td {
+    background: #fef3c7;
+}
+
+td[rowspan] {
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+/* ---------- Form ---------- */
+form label {
+    display: inline-block;
+    min-width: 170px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[list],
+form select,
+form textarea {
+    width: 100%;
+    max-width: 420px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font: inherit;
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+}
+
+form input[type="checkbox"] {
+    accent-color: var(--primary);
+    margin: 0 4px 0 12px;
+    transform: scale(1.15);
+}
+
+form input[type="file"] {
+    font: inherit;
+}
+
+form textarea {
+    max-width: 100%;
+    resize: vertical;
+}
+
+/* ---------- Buttons ---------- */
+button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s;
+}
+
+button[type="submit"] {
+    background: var(--primary);
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background: var(--primary-dark);
+}
+
+button[type="reset"] {
+    background: #e5e7eb;
+    color: var(--text);
+}
+
+button[type="reset"]:hover {
+    background: #d1d5db;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 800px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "aside"
+            "main";
+        gap: 16px;
+    }
+
+    aside {
+        position: static;
+        margin: 0 16px;
+    }
+
+    main {
+        margin: 0 16px 16px;
+    }
+
+    main section {
+        padding: 18px;
+    }
+
+    form label {
+        display: block;
+    }
+}
